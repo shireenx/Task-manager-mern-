@@ -188,7 +188,7 @@ function App() {
     return (
         <div className="App">
           <div className='ops'>
-            <div className='header'><h1>Task Manager</h1></div>
+            <div className='header'><h1>Notes Manager</h1></div>
             
             <div className='form'>
             <form onSubmit={handleSubmit}>
@@ -298,7 +298,7 @@ function App() {
             </ul>
             </div>
             
-            <h2>Tasks</h2>
+            <h2>Notes</h2>
             <div className="card-container">
                 {filteredTasks.map((task) => (
                     <div

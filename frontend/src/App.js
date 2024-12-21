@@ -19,7 +19,7 @@ function App() {
     const fetchTasks = async () => {
         try {
             const response = await
-                fetch('http://localhost:5000/api/tasks');
+                fetch('https://notes-manager-mern-backend.onrender.com/api/tasks');
             const data = await response.json();
             setTasks(data);
         } catch (error) {
@@ -53,7 +53,7 @@ function App() {
 
         try {
             const response = await
-                fetch('http://localhost:5000/api/tasks', {
+                fetch('https://notes-manager-mern-backend.onrender.com/api/tasks', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -101,7 +101,7 @@ function App() {
     const handleDelete = async (taskId) => {
         try {
             await
-                fetch(`http://localhost:5000/api/tasks/${taskId}`, {
+                fetch(`https://notes-manager-mern-backend.onrender.com/api/tasks/${taskId}`, {
                     method: 'DELETE',
                 });
             setTasks(tasks.filter((task) => task._id !== taskId));
@@ -113,7 +113,7 @@ function App() {
     const handlePriorityChange = async (taskId, newPriority) => {
         try {
             const response = await
-                fetch(`http://localhost:5000/api/tasks/${taskId}`, {
+                fetch(`https://notes-manager-mern-backend.onrender.com/api/tasks/${taskId}`, {
                     method: 'PATCH',
                     headers: {
                         'Content-Type': 'application/json',
@@ -137,7 +137,7 @@ function App() {
     };
     const handleStatusChange = async (taskId, newStatus) => {
       try {
-          const response = await fetch(`http://localhost:5000/api/tasks/${taskId}`, {
+          const response = await fetch(`https://notes-manager-mern-backend.onrender.com/api/tasks/${taskId}`, {
               method: 'PATCH',
               headers: {
                   'Content-Type': 'application/json',
